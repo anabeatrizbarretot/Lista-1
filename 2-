@@ -1,0 +1,24 @@
+/******************************************************************************
+Elabore um algoritmo para calcular: 𝑥^2
+ e 𝑥^3
+
+Casos de teste:
+a) Para o número 2, o quadrado é 4 e o cubo é 8;
+b) Para o número 5, o quadrado é 25 e o cubo é 125. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+   int a = 0;
+    int quadrado=0, cubo=0;
+
+    printf("Digite um número: ");
+    scanf("%d", &a);
+
+    quadrado = a * a;
+    cubo = a * a * a;
+
+    printf("O quadrado é %d e o cubo %d.", quadrado, cubo);
+}
