@@ -1,0 +1,33 @@
+/******************************************************************************
+Faça um algoritmo para calcular a média ponderada de três notas de um aluno 
+considerando os pesos 2,
+3 e 5, respectivamente para a primeira, segunda e terceira nota.
+
+Casos de teste:
+a) Para as notas 5,0, 4,5 e 9,5, a média ponderada é 7,10;
+b) Para as notas 10,0, 4,0 e 7,5, a média ponderada é 6,95.
+
+Observação: Utilize uma saída formatada para apresentar a média ponderada
+com duas casas decimais. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float n1 = 0, n2 = 0, n3 = 0;
+    float media = 0;
+
+    printf("Digite a nota 1: ");
+    scanf("%f", &n1);
+    
+    printf("Digite a nota 2: ");
+    scanf("%f", &n2);
+    
+    printf("Digite a nota 3: ");
+    scanf("%f", &n3);
+
+    media = ((n1 * 2) + (n2 * 3) + (n3 * 5)) / 10;
+
+    printf(" Para as notas %.2f, %.2f e %.2f a média ponderada é %.2f.", n1, n2, n3, media);
+}
