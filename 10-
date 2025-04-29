@@ -1,0 +1,45 @@
+/******************************************************************************
+
+Faça um algoritmo para calcular a quantidade de latas de tinta necessária para pintar um tanque cilíndrico
+de combustível e o custo do material para o serviço de pintura. A altura e o raio do tanque são fornecidos
+pelo usuário. O preço da lata de tinta também é fornecido pelo usuário. Considere que cada lata contém
+5 litros de tinta e que cada litro de tinta pinta 3 metros quadrados da área do tanque. A área de um tanque
+cilíndrico é dada pela fórmula:
+𝐴் = 𝐴௅ + 2𝐴஻ = 2𝜋 𝑟 ℎ + 2 𝜋𝑟ଶ = 2𝜋 𝑟(ℎ + 𝑟)
+Casos de teste:
+a) Para um tanque de 3,06 metros de altura e 1,22 metros de raio, considerando o preço de R$ 50,00 por
+lata de tinta, são necessárias 2,19 latas de tinta e o custo é de R$ 109,36;
+b) Para um tanque de 6,0 metros de altura e 1,12 metros de raio, considerando o preço de R$ 50,00 por
+lata de tinta, são necessárias 3,34 latas de tinta e o custo é de R$ 167,02.
+
+*******************************************************************************/
+#include <stdio.h>   // Biblioteca padrão de entrada e saída
+#include <math.h>    // Biblioteca para usar a constante M_PI e cálculos matemáticos
+
+int main() {
+    double altura = 0, raio = 0, preco_lata = 0;   // Variáveis para altura, raio do tanque e preço da lata
+    double area = 0, litros = 0, latas = 0, custo = 0;  // Área, quantidade de litros, latas necessárias e custo total
+
+    // Entrada de dados
+    printf("Digite a altura do tanque (em metros): ");
+    scanf("%lf", &altura);
+
+    printf("Digite o raio do tanque (em metros): ");
+    scanf("%lf", &raio);
+
+    printf("Digite o preço da lata de tinta: ");
+    scanf("%lf", &preco_lata);
+
+    // Processamento
+    area = 2 * M_PI * raio * (altura + raio); // Calcula a área total do tanque usando a fórmula: 2πr(h+r)
+    litros = area / 3.0;                      // Cada litro pinta 3 metros quadrados
+    latas = litros / 5.0;                     // Cada lata contém 5 litros
+    custo = latas * preco_lata;                // Custo total da tinta
+
+    // Saída de dados
+    printf("\nÁrea a ser pintada: %.2lf metros quadrados\n", area);
+    printf("Quantidade de latas necessárias: %.2lf\n", latas);
+    printf("Custo total: R$ %.2lf\n", custo);
+
+    return 0;
+}
