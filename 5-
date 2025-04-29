@@ -1,0 +1,42 @@
+/******************************************************************************
+
+Elabore um algoritmo para calcular o preço de venda de um carro que é formado 
+pelo preço da
+montadora, mais 15% de lucro, mais 11% de IPI, mais 17% de ICMS; as porcentagens
+são aplicadas sobre
+o preço da montadora; apresente o preço de venda, o valor do lucro e o valor de 
+cada um dos impostos
+(IPI e ICMS).
+
+Casos de teste:
+a) Para o preço da montadora igual a R$ 39.294,00, o preço de venda é R$ 56.190,42, 
+o lucro é R$ 5.894,10,
+o IPI é R$ 4.322,34 e o ICMS é R$ 6.679,98;
+b) Para o preço da montadora igual a R$ 130.000,00, o preço de venda é R$ 185.900,00,
+o lucro é
+R$ 19.500,00, o IPI é R$ 14.300,00 e o ICMS é R$ 22.100,00. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    double preco=0, lucro=0, ipi=0, icms=0, final=0;
+    
+    printf(" Qual o preço da montadora:");
+    scanf("%lf", &preco);
+    
+    lucro= (preco * 0.15);
+    ipi= (preco * 0.11);
+    icms= (preco * 0.17);
+    final= lucro+ipi+icms+preco;
+    
+    
+    printf("Valore:\n");
+    printf("Valor final.: R$ %.2lf\n", final);
+    printf("Valor lucro.: R$ %.2lf\n", lucro);
+    printf("Valor IPI...: R$ %.2lf\n", ipi);
+    printf("Valor ICMS..: R$ %.2lf\n", icms);
+
+    return 0;
+}
