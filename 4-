@@ -1,0 +1,38 @@
+/******************************************************************************
+
+Elabore um algoritmo para obter o tempo de duração de um evento expresso em 
+segundos e mostrá-lo
+expresso em horas, minutos e segundos.
+Casos de teste:
+a) O tempo de duração de 53.115 segundos corresponde a 14 horas, 45 minutos e
+15 segundos, e o
+algoritmo deve apresentar 14:45:15 na saída;
+
+b) O tempo de duração de 4.200 segundos corresponde a 1 hora e 10 minutos, e 
+o algoritmo deve
+apresentar 01:10:00 na saída.
+
+Observação: Utilize uma saída formatada para apresentar o tempo de duração em 
+horas, minutos e
+segundos no formato HH:MM:SS, onde HH expressa as horas com dois dígitos, MM 
+expressa os minutos
+com dois dígitos e SS expressa os segundos com dois dígitos. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+   int tempo=0, horas=0, min=0, seg=0;
+   
+   printf("Qual o tempo de duração do evento expresso:");
+   scanf("%d", &tempo);
+   
+    horas = (tempo / 3600);
+    min = ( tempo % 3600) / 60;
+    seg = ( tempo % 3600) % 60;
+   
+    printf("%02d:%02d:%02d\n", horas, min, seg);
+
+    return 0;
+}
