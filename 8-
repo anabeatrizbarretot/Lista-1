@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Elabore um algoritmo para calcular a distância entre dois pontos, 𝐴(𝑥ଵ, 𝑦ଵ
+) e 𝐵(𝑥ଶ, 𝑦ଶ
+), por meio da
+fórmula:
+Casos de teste:
+a) Dados os pontos A (1,0, 1,0) e B (3,0, 1,0), 𝑑஺஻ é igual a 2,0;
+b) Dados os pontos A (-3,0, -11,0) e B (2,0, 1,0), 𝑑஺஻ é igual a 13,0.
+Observação: A função sqrt() da biblioteca math.h retorna um valor do tipo double. 
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x1, y1, x2, y2;
+    double distancia;
+
+    printf("Digite as coordenadas do ponto A (x1, y1): ");
+    scanf("%lf %lf", &x1, &y1);
+
+    printf("Digite as coordenadas do ponto B (x2, y2): ");
+    scanf("%lf %lf", &x2, &y2);
+
+    distancia = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
+
+    printf("A distancia entre A e B eh: %.1lf\n", distancia);
+
+    return 0;
+}
