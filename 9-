@@ -1,0 +1,24 @@
+#include <stdio.h> //// Biblioteca usada
+
+
+int main() {
+    double horas=0, velocidade=0, distancia=0;
+    double litros=0, quantidade=0;
+    
+    //Entrada
+    printf("Digite o tempo de viagem: ");
+    scanf("%lf", &horas);
+
+    printf("Digite a velocidade: ");
+    scanf("%lf", &velocidade);
+
+    //Processamento
+    distancia = (velocidade * horas); //// Calcula a distância percorrida
+    litros = (distancia / 12); //  Quantidade de litros gastos, um automóvel que faz 12,0 Km/l         
+    quantidade = (litros / 3.785); // Converte litros para galões, um galão americano possui 3,785 litros. 
+
+    //Saída
+    printf(" \nPara uma viagem de %.0lf horas na velocidade de %.0lf Km/h,são necessários %.2lf galões americanos \n", horas, velocidade, quantidade);
+
+    return 0;
+}
