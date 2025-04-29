@@ -1,0 +1,55 @@
+/******************************************************************************
+A equação do segundo grau recebe esse nome porque é uma equação polinomial cujo termo de maior
+grau está elevado ao quadrado. Essa equação é também chamada de equação quadrática, é representada
+por:
+
+ax^2+ bx + c = 0
+Na equação do segundo grau, o x é a incógnita e representa um valor desconhecido. As letras a, b e c são
+chamadas de coeficientes da equação. Os coeficientes são números reais e o coeficiente a tem que ser
+diferente de zero, pois do contrário passa a ser uma equação do primeiro grau. Resolver uma equação de
+segundo Grau, significa buscar valores reais de x, que tornam a equação verdadeira. Esses valores são
+denominados raízes da equação. Uma equação quadrática possui no máximo duas raízes reais.
+O método conhecido como método de Bhaskara ou fórmula de Bhaskara aponta que as raízes de uma
+equação do segundo grau do tipo ax2
+ + bx + c = 0 é dada pela seguinte relação:
+Elabore um algoritmo para calcular as raízes de uma equação de segundo grau que utilize a fórmula de
+Bhaskara.
+Casos de teste:
+a) Para a equação 𝑥^2 − 2𝑥 − 3 = 0, os coeficientes são a = 1, b = -2 e c = -3, e as raízes são x’ = 3 e
+x’’ = -1;
+b) Para a equação −𝑥^2 − 4𝑥 + 5 = 0, os coeficientes são a = -1, b = -4 e c = 5, e as raízes são x’ = -5 e
+x’’ = 1. 
+
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h> // Biblioteca para sqrt()
+
+int main() {
+    double a, b, c; 
+    double delta, x1, x2;
+
+    printf("Digite o valor de a: ");
+    scanf("%lf", &a);
+
+    printf("Digite o valor de b: ");
+    scanf("%lf", &b);
+
+    printf("Digite o valor de c: ");
+    scanf("%lf", &c);
+
+    delta = b*b - 4*a*c;
+
+    if (delta < 0) {
+        printf("Não existem raízes reais.\n");
+    } else {
+        x1 = (-b + sqrt(delta)) / (2*a);
+        x2 = (-b - sqrt(delta)) / (2*a);
+
+        printf("As raízes da equação são:\n");
+        printf("x' = %.0lf\n", x1);
+        printf("x'' = %.0lf\n", x2);
+    }
+
+    return 0;
+}
