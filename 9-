@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Faça um algoritmo para calcular a quantidade de galões americanos de combustível necessária para uma
+viagem em um automóvel que faz 12,0 Km/l; o tempo gasto e a velocidade média na viagem são
+informados pelo usuário.
+Casos de teste:
+b) Para uma viagem de 3,0 horas na velocidade de 80 Km/h, são necessários 5,28 galões americanos;
+a) Para uma viagem de 2,0 horas na velocidade de 100 Km/h, são necessários 4,40 galões americanos.
+Observação: Um galão americano possui aproximadamente 3,785 litros. 
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double horas=0, velocidade=0, distancia=0;
+    double litros=0, quant=0;
+
+    printf("Digite o tempo de viagem: ");
+    scanf("%lf", &horas);
+
+    printf("Digite a velocidade: ");
+    scanf("%lf", &velocidade);
+
+    distancia = velocidade * horas;    
+    litros = distancia / 12.0;          
+    quant = litros / 3.785; 
+
+    printf(" são necessários %.2lf galões americanos \n", quant);
+
+    return 0;
+}
