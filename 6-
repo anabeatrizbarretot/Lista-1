@@ -1,0 +1,25 @@
+/******************************************************************************
+Elabore um algoritmo para obter do usuário a velocidade em quilômetros por hora (km/h) e informar a
+mesma velocidade em metros por segundo (m/s).
+Casos de teste:
+a) A velocidade de 72,0 Km/h corresponde à velocidade de 20,0 m/s;
+b) A velocidade de 180,0 Km/h corresponde à velocidade de 50,0 m/s. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float km=0, ms=0;
+    
+    printf(" Qual a velocidade");
+    scanf("%f", &km);
+    
+    ms = km / 3.6;
+    
+    
+    printf("A velocidade de %.2f Km/h corresponde à velocidade de %.2f m/s.\n", km, ms);
+    
+
+    return 0;
+}
